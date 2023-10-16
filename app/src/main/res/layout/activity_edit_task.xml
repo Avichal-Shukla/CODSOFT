@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6E9E9"
+    android:padding="15sp"
+    tools:context=".EditTaskActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/tvAddNewTask"
+        android:text="Edit the task"
+        android:fontFamily="cursive"
+        android:textColor="#CF4242"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20sp">
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:id="@+id/etTitle"
+        android:layout_below="@id/tvAddNewTask"
+        android:inputType="text"
+        android:textSize="20dp">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:id="@+id/etDescription"
+        android:layout_below="@id/etTitle"
+        android:inputType="text"
+        android:textSize="20dp">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Priority (High/Low)"
+        android:id="@+id/etPriority"
+        android:layout_below="@id/etDescription"
+        android:textSize="20dp">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:hint="Due Date"
+        android:layout_below="@id/etPriority"
+        android:id="@+id/etDate"
+        android:textSize="20dp">
+    </EditText>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgForRBtn"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/etDate"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active"
+            android:textSize="18dp"
+            android:id="@+id/rbActive"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:checked="true">
+        </RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed"
+            android:textSize="18dp"
+            android:id="@+id/rbCompleted"
+            android:layout_weight="1"
+            android:layout_toEndOf="@+id/rbUser">
+        </RadioButton>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSaveTask"
+        android:text="SAVE"
+        android:layout_below="@+id/rgForRBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
+    </Button>
+
+</RelativeLayout>

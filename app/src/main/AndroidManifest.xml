@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.tasktracker">
+
+<!--    Using this permission we can make device vibrate for certain tasks-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/tt_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/tt_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TaskTracker"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".TaskDetailsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".OpeningActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+
+    </application>
+
+</manifest>

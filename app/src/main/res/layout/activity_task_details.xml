@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6E9E9"
+    android:padding="15sp"
+    tools:context=".TaskDetailsActivity">
+
+    <TextView
+        android:id="@+id/tvTaskName"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Task Details"
+        android:textColor="#CF4242"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="50sp">
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlTaskDetails"
+        android:layout_below="@+id/tvTaskName">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:id="@+id/llTaskTitle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTaskTitleHeading"
+                android:layout_marginEnd="10sp"
+                android:text="Title:"
+                android:fontFamily="cursive"
+                android:textColor="#CF4242"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTaskTitle"
+                android:textSize="30sp"
+                android:fontFamily="cursive"
+                android:textColor="#CF4242"
+                android:layout_toEndOf="@+id/tvTaskTitleHeading">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:id="@+id/llTaskDescription"
+            android:layout_below="@+id/llTaskTitle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTaskDescriptionHeading"
+                android:layout_marginEnd="10sp"
+                android:text="Description:"
+                android:fontFamily="cursive"
+                android:textColor="#CF4242"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTaskDescription"
+                android:textSize="30sp"
+                android:fontFamily="cursive"
+                android:textColor="#CF4242"
+                android:layout_toEndOf="@+id/tvTaskDescriptionHeading">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:id="@+id/llTaskPriority"
+            android:layout_below="@+id/llTaskDescription">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                android:id="@+id/tvTaskPriorityHeading"
+                android:text="Priority:"
+                android:fontFamily="cursive"
+                android:textColor="#CF4242"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTaskPriority"
+                android:textSize="30sp"
+                android:textColor="#CF4242"
+                android:fontFamily="cursive"
+                android:layout_toEndOf="@+id/tvTaskPriorityHeading">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:id="@+id/llTaskDueDate"
+            android:layout_below="@+id/llTaskPriority">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTaskDateHeading"
+                android:layout_marginEnd="10sp"
+                android:text="Due Date:"
+                android:fontFamily="cursive"
+                android:textColor="#CF4242"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTaskDate"
+                android:textSize="30sp"
+                android:textColor="#CF4242"
+                android:fontFamily="cursive"
+                android:layout_toEndOf="@+id/tvTaskDateHeading">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:id="@+id/llTaskStatus"
+            android:layout_below="@+id/llTaskDueDate">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTaskStatusHeading"
+                android:text="Status:"
+                android:layout_marginEnd="10sp"
+                android:fontFamily="cursive"
+                android:textColor="#CF4242"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTaskStatus"
+                android:textSize="30sp"
+                android:textColor="#CF4242"
+                android:fontFamily="cursive"
+                android:layout_toEndOf="@+id/tvTaskStatusHeading">
+            </TextView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llTaskDueDate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100sp"
+            android:text="BACK">
+        </Button>
+
+    </RelativeLayout>
+
+</RelativeLayout>
